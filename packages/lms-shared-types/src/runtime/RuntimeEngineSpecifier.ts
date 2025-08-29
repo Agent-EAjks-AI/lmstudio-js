@@ -1,13 +1,13 @@
 import { z } from "zod";
 
-export interface RuntimeSpecifier {
+export interface RuntimeEngineSpecifier {
   name: string;
   version: string;
   supportedModelFormats: string[];
   selectedForModelFormats: string[];
 }
 
-export const runtimeSpecifierSchema = z.object({
+export const runtimeEngineSpecifierSchema = z.object({
   name: z.string(),
   version: z.string(),
   supportedModelFormats: z.array(z.string()),

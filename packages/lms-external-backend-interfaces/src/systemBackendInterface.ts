@@ -3,7 +3,7 @@ import { type InferClientPort } from "@lmstudio/lms-communication-client";
 import {
   backendNotificationSchema,
   modelInfoSchema,
-  runtimeSpecifierSchema,
+  runtimeEngineSpecifierSchema,
 } from "@lmstudio/lms-shared-types";
 import { z } from "zod";
 
@@ -61,9 +61,9 @@ export function createSystemBackendInterface() {
         parameter: z.void(),
         returns: z.void(),
       })
-      .addRpcEndpoint("getRuntimeSpecifiers", {
+      .addRpcEndpoint("getRuntimeEngineSpecifiers", {
         parameter: z.void(),
-        returns: z.array(runtimeSpecifierSchema),
+        returns: z.array(runtimeEngineSpecifierSchema),
       })
   );
 }
