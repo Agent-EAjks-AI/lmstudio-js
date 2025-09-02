@@ -415,6 +415,8 @@ export {
   runtimeSchema,
 } from "./Runtime.js";
 export {
+  RuntimeEngineCapabilities,
+  runtimeEngineCapabilitiesSchema,
   RuntimeEngineSpecifier,
   runtimeEngineSpecifierSchema,
 } from "./runtime/RuntimeEngineSpecifier.js";

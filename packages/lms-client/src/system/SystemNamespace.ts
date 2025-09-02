@@ -12,7 +12,6 @@ import {
   type EmbeddingModelInfo,
   type LLMInfo,
   type ModelInfo,
-  type RuntimeEngineSpecifier,
 } from "@lmstudio/lms-shared-types";
 import { z } from "zod";
 
@@ -181,8 +180,8 @@ export class UnstableSystemNamespace {
    *
    * @experimental
    */
-  public async getRuntimeEngineSpecifiers(): Promise<Array<RuntimeEngineSpecifier>> {
+  public async getRuntimeEngines() {
     const stack = getCurrentStack(1);
-    return await this.systemPort.callRpc("getRuntimeEngineSpecifiers", undefined, { stack });
+    return await this.systemPort.callRpc("getRuntimeEngines", undefined, { stack });
   }
 }

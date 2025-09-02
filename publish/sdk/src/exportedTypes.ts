@@ -189,6 +189,7 @@ export type {
   RetrievalChunk,
   RetrievalChunkingMethod,
   RetrievalFileProcessingStep,
+  RuntimeEngineCapabilities,
   RuntimeEngineSpecifier,
   StatusStepState,
   StatusStepStatus,
